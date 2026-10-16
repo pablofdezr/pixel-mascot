@@ -1,9 +1,9 @@
-import { accessoryColor, faceAnchors, type Anchors, type Outfit } from "../engine/accessories";
-import { faceColor, standardFace } from "../engine/face";
-import { floor } from "../engine/ground";
-import { ballShade, boxShade, hex, palette, rotate, sdRoundRect, type Vec } from "../engine/pixels";
-import type { Pose } from "../engine/pose";
-import type { CharacterDef } from "./types";
+import { accessoryColor, faceAnchors, type Anchors, type Outfit } from "../engine/accessories.ts";
+import { faceColor, standardFace } from "../engine/face.ts";
+import { floor } from "../engine/ground.ts";
+import { ballShade, boxShade, hex, palette, rotate, sdRoundRect, type Vec } from "../engine/pixels.ts";
+import type { Pose } from "../engine/pose.ts";
+import type { CharacterDef } from "./types.ts";
 
 const RED = palette("#4f1214", "#a52a2a", "#d64541", "#f07a6e", "#ffc4b8");
 const BLACK = palette("#0c0c10", "#1d1d24", "#2f2f38", "#4a4a56", "#6c6c7a");

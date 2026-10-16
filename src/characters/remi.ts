@@ -1,9 +1,9 @@
-import { accessoryColor, faceAnchors, type Anchors, type Outfit } from "../engine/accessories";
-import { faceColor, standardFace } from "../engine/face";
-import { floor } from "../engine/ground";
-import { boxShade, distanceToSegment, hex, palette, sdRoundRect, sdTriangle, type Vec } from "../engine/pixels";
-import type { Pose } from "../engine/pose";
-import type { CharacterDef } from "./types";
+import { accessoryColor, faceAnchors, type Anchors, type Outfit } from "../engine/accessories.ts";
+import { faceColor, standardFace } from "../engine/face.ts";
+import { floor } from "../engine/ground.ts";
+import { boxShade, distanceToSegment, hex, palette, sdRoundRect, sdTriangle, type Vec } from "../engine/pixels.ts";
+import type { Pose } from "../engine/pose.ts";
+import type { CharacterDef } from "./types.ts";
 
 const PAPER = palette("#7b6f58", "#d9cfb5", "#f7f1e3", "#fffaf0", "#ffffff");
 const FLAP = hex("#efe6cf");

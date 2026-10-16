@@ -5,9 +5,9 @@
 
 import { writeFileSync } from "node:fs";
 
-import { mug } from "../examples/characters/mug";
-import { CANVAS_H, CANVAS_W, CHARACTERS, NO_OUTFIT, renderFrame, restPose } from "../src";
-import { png } from "./png";
+import { mug } from "../examples/characters/mug.ts";
+import { CANVAS_H, CANVAS_W, CHARACTERS, NO_OUTFIT, renderFrame, restPose } from "../src/index.ts";
+import { png } from "./png.ts";
 
 const defs = [...CHARACTERS, mug];
 const CROP = { x: 28, y: 20, w: 88, h: 100 };

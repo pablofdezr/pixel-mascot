@@ -1,5 +1,5 @@
-import { distanceToPolyline, hex, sdCircle, sdTriangle, type Vec } from "./pixels";
-import type { Pose } from "./pose";
+import { distanceToPolyline, hex, sdCircle, sdTriangle, type Vec } from "./pixels.ts";
+import type { Pose } from "./pose.ts";
 
 export interface Face {
   /** Left and right eye centres. */

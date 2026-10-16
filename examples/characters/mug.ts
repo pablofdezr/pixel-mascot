@@ -15,7 +15,7 @@ import {
   type Outfit,
   type Pose,
   type Vec,
-} from "../../src";
+} from "../../src/index.ts";
 
 // The character from docs/creating-characters.md: a coffee mug whose
 // signature move is a puff of steam.

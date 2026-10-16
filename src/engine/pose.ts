@@ -1,4 +1,4 @@
-import type { Vec } from "./pixels";
+import type { Vec } from "./pixels.ts";
 
 export type MouthShape = "smile" | "grin" | "o" | "flat" | "sad";
 

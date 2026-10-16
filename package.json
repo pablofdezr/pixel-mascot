@@ -1,6 +1,6 @@
 {
   "name": "pixel-mascot",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "Procedural pixel-art mascots for the web: no sprites, every frame computed from signed distance functions. Eleven characters, 23 gestures, 28 accessories.",
   "keywords": [
     "pixel-art",
@@ -18,25 +18,33 @@
     "type": "git",
     "url": "git+https://github.com/pablofdezr/pixel-mascot.git"
   },
+  "bugs": {
+    "url": "https://github.com/pablofdezr/pixel-mascot/issues"
+  },
   "type": "module",
   "sideEffects": false,
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "types": "./src/index.ts",
-      "default": "./src/index.ts"
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
     }
   },
   "files": [
+    "dist",
     "src",
-    "LICENSE",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
   "scripts": {
     "dev": "vite examples",
     "build:example": "vite build examples --outDir ../dist-example --emptyOutDir",
     "sheet": "tsx scripts/sheet.ts",
     "typecheck": "tsc --noEmit",
-    "lineup": "tsx scripts/lineup.ts"
+    "lineup": "tsx scripts/lineup.ts",
+    "build": "rm -rf dist && tsc -p tsconfig.build.json && node scripts/rewrite-dts.mjs",
+    "prepublishOnly": "npm run typecheck && npm run build"
   },
   "devDependencies": {
     "@types/node": "^26.6.5",

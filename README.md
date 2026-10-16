@@ -23,21 +23,13 @@ example in this repo (below).
 
 ## Install
 
-It isn't on npm yet. Install it from GitHub:
-
 ```sh
-npm install github:pablofdezr/pixel-mascot
+npm install pixel-mascot
 ```
 
-The package is TypeScript source, so it needs a bundler that compiles dependencies. Vite, esbuild and
-Bun do this out of the box. In Next.js, add it to `transpilePackages`:
-
-```js
-// next.config.js
-export default { transpilePackages: ["pixel-mascot"] };
-```
-
-You can also copy `src/` into your project; it has no imports outside itself.
+It ships ES modules with type declarations and has no dependencies. The animator needs a browser
+(`<canvas>`, `requestAnimationFrame`); `renderFrame` and the frame helpers also run in Node, which is
+how the sprite-sheet script below works.
 
 ## Quick start
 

@@ -1,8 +1,8 @@
-import type { CharacterDef } from "./characters/types";
-import { NO_OUTFIT, type Outfit } from "./engine/accessories";
-import { CANVAS_H, CANVAS_W, ORIGIN } from "./engine/canvas";
-import { restPose, type Pose } from "./engine/pose";
-import { renderFrame, toCanvas } from "./engine/render";
+import type { CharacterDef } from "./characters/types.ts";
+import { NO_OUTFIT, type Outfit } from "./engine/accessories.ts";
+import { CANVAS_H, CANVAS_W, ORIGIN } from "./engine/canvas.ts";
+import { restPose, type Pose } from "./engine/pose.ts";
+import { renderFrame, toCanvas } from "./engine/render.ts";
 
 export type Mood =
   | "idle"

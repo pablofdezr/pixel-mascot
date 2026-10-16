@@ -1,5 +1,5 @@
-import { MOUTH_SCALE, type Face } from "./face";
-import { hex, sdCircle, sdRoundRect, sdTriangle, distanceToSegment, type Vec } from "./pixels";
+import { MOUTH_SCALE, type Face } from "./face.ts";
+import { hex, sdCircle, sdRoundRect, sdTriangle, distanceToSegment, type Vec } from "./pixels.ts";
 
 /** Where a character wears things, in its own model space. */
 export interface Anchors {

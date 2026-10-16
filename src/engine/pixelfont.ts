@@ -1,4 +1,4 @@
-import type { Vec } from "./pixels";
+import type { Vec } from "./pixels.ts";
 
 /** 3×5 pixel digits and symbols for little LCD screens. */
 const GLYPHS: Record<string, string[]> = {

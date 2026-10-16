@@ -1,5 +1,5 @@
-import { Animator, CHARACTERS, GESTURE_NAMES, MOODS, NO_OUTFIT, WARDROBE, type CharacterDef, type Mood, type Slot } from "../src";
-import { mug } from "./characters/mug";
+import { Animator, CHARACTERS, GESTURE_NAMES, MOODS, NO_OUTFIT, WARDROBE, type CharacterDef, type Mood, type Slot } from "../src/index.ts";
+import { mug } from "./characters/mug.ts";
 
 // Every built-in character plus the one from docs/creating-characters.md.
 const characters: CharacterDef[] = [...CHARACTERS, mug];

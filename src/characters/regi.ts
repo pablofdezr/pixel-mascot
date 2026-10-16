@@ -1,10 +1,10 @@
-import { accessoryColor, faceAnchors, type Outfit } from "../engine/accessories";
-import { faceColor, standardFace } from "../engine/face";
-import { floor } from "../engine/ground";
-import { inkAt, textWidth } from "../engine/pixelfont";
-import { boxShade, hex, palette, sdRoundRect, type Vec } from "../engine/pixels";
-import type { Pose } from "../engine/pose";
-import type { CharacterDef } from "./types";
+import { accessoryColor, faceAnchors, type Outfit } from "../engine/accessories.ts";
+import { faceColor, standardFace } from "../engine/face.ts";
+import { floor } from "../engine/ground.ts";
+import { inkAt, textWidth } from "../engine/pixelfont.ts";
+import { boxShade, hex, palette, sdRoundRect, type Vec } from "../engine/pixels.ts";
+import type { Pose } from "../engine/pose.ts";
+import type { CharacterDef } from "./types.ts";
 
 /**
  * A modern electronic cash register, seen from the front: light grey case with

@@ -1,9 +1,9 @@
-import { accessoryColor, faceAnchors, type Outfit } from "../engine/accessories";
-import { faceColor, standardFace } from "../engine/face";
-import { floor } from "../engine/ground";
-import { hex, palette, sdRoundRect, sdTriangle, type Vec } from "../engine/pixels";
-import type { Pose } from "../engine/pose";
-import type { CharacterDef } from "./types";
+import { accessoryColor, faceAnchors, type Outfit } from "../engine/accessories.ts";
+import { faceColor, standardFace } from "../engine/face.ts";
+import { floor } from "../engine/ground.ts";
+import { hex, palette, sdRoundRect, sdTriangle, type Vec } from "../engine/pixels.ts";
+import type { Pose } from "../engine/pose.ts";
+import type { CharacterDef } from "./types.ts";
 
 // A chunky yellow pencil standing on its eraser, point up.
 const LINE = hex("#5a4210");

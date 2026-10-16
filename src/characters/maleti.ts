@@ -1,9 +1,9 @@
-import { accessoryColor, faceAnchors, type Outfit } from "../engine/accessories";
-import { faceColor, standardFace } from "../engine/face";
-import { floor } from "../engine/ground";
-import { boxShade, hex, palette, sdRoundRect, type Vec } from "../engine/pixels";
-import type { Pose } from "../engine/pose";
-import type { CharacterDef } from "./types";
+import { accessoryColor, faceAnchors, type Outfit } from "../engine/accessories.ts";
+import { faceColor, standardFace } from "../engine/face.ts";
+import { floor } from "../engine/ground.ts";
+import { boxShade, hex, palette, sdRoundRect, type Vec } from "../engine/pixels.ts";
+import type { Pose } from "../engine/pose.ts";
+import type { CharacterDef } from "./types.ts";
 
 const LEATHER = palette("#3b2210", "#7a4a22", "#a5682f", "#c98a4c", "#e8b27a");
 const HANDLE = palette("#2a170a", "#4f2f15", "#6b4220", "#8a5a30", "#a87444");

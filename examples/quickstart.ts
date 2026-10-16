@@ -1,5 +1,5 @@
 // The quick start from the README, kept here so `npm run typecheck` checks it.
-import { Animator, pum } from "../src";
+import { Animator, pum } from "../src/index.ts";
 
 const canvas = document.querySelector("canvas")!;
 const mascot = new Animator(canvas, pum);

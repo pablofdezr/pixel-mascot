@@ -24,8 +24,8 @@ import {
   type Mood,
   type Outfit,
   type Pose,
-} from "../src";
-import { png } from "./png";
+} from "../src/index.ts";
+import { png } from "./png.ts";
 
 const FRAMES = 6;
 /** Moods hold; each is sampled over this many seconds. */

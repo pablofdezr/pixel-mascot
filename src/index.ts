@@ -12,25 +12,25 @@ export {
   DOOR_SHUT_MS,
   type Gesture,
   type Mood,
-} from "./animator";
+} from "./animator.ts";
 
-export { CHARACTERS } from "./characters";
-export { archi } from "./characters/archi";
-export { calcu } from "./characters/calcu";
-export { euri } from "./characters/euri";
-export { grapo } from "./characters/grapo";
-export { lapi } from "./characters/lapi";
-export { maleti } from "./characters/maleti";
-export { moni } from "./characters/moni";
-export { pum } from "./characters/pum";
-export { regi } from "./characters/regi";
-export { remi } from "./characters/remi";
-export { tiqui } from "./characters/tiqui";
-export type { CharacterDef } from "./characters/types";
+export { CHARACTERS } from "./characters/index.ts";
+export { archi } from "./characters/archi.ts";
+export { calcu } from "./characters/calcu.ts";
+export { euri } from "./characters/euri.ts";
+export { grapo } from "./characters/grapo.ts";
+export { lapi } from "./characters/lapi.ts";
+export { maleti } from "./characters/maleti.ts";
+export { moni } from "./characters/moni.ts";
+export { pum } from "./characters/pum.ts";
+export { regi } from "./characters/regi.ts";
+export { remi } from "./characters/remi.ts";
+export { tiqui } from "./characters/tiqui.ts";
+export type { CharacterDef } from "./characters/types.ts";
 
-export { renderFrame, toCanvas, type Art } from "./engine/render";
-export { restPose, type Pose, type Mark, type MouthShape } from "./engine/pose";
-export { standardFace, faceColor, MOUTH_SCALE, type Face } from "./engine/face";
+export { renderFrame, toCanvas, type Art } from "./engine/render.ts";
+export { restPose, type Pose, type Mark, type MouthShape } from "./engine/pose.ts";
+export { standardFace, faceColor, MOUTH_SCALE, type Face } from "./engine/face.ts";
 export {
   accessoryColor,
   faceAnchors,
@@ -41,10 +41,10 @@ export {
   type Anchors,
   type Outfit,
   type Slot,
-} from "./engine/accessories";
-export { sheet, floor, type Ground, type SheetSpec } from "./engine/ground";
-export { BALLOON_OVERLAP, CANVAS_H, CANVAS_W, ORIGIN } from "./engine/canvas";
-export { inkAt, textWidth } from "./engine/pixelfont";
+} from "./engine/accessories.ts";
+export { sheet, floor, type Ground, type SheetSpec } from "./engine/ground.ts";
+export { BALLOON_OVERLAP, CANVAS_H, CANVAS_W, ORIGIN } from "./engine/canvas.ts";
+export { inkAt, textWidth } from "./engine/pixelfont.ts";
 export {
   ballShade,
   boxShade,
@@ -63,4 +63,4 @@ export {
   tone,
   type Palette,
   type Vec,
-} from "./engine/pixels";
+} from "./engine/pixels.ts";

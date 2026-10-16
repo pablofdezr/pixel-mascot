@@ -1,4 +1,4 @@
-import type { Art } from "../engine/render";
+import type { Art } from "../engine/render.ts";
 
 export interface CharacterDef {
   id: string;

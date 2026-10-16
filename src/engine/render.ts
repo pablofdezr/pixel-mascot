@@ -1,8 +1,8 @@
-import { SIZE, headphoneReach, type Anchors, type Outfit } from "./accessories";
-import { BALLOON_OVERLAP, CANVAS_H, CANVAS_W, ORIGIN } from "./canvas";
-import type { Ground } from "./ground";
-import { hex, type Vec } from "./pixels";
-import type { Pose } from "./pose";
+import { SIZE, headphoneReach, type Anchors, type Outfit } from "./accessories.ts";
+import { BALLOON_OVERLAP, CANVAS_H, CANVAS_W, ORIGIN } from "./canvas.ts";
+import type { Ground } from "./ground.ts";
+import { hex, type Vec } from "./pixels.ts";
+import type { Pose } from "./pose.ts";
 
 /**
  * A character's drawing. `sample` colours one point of its 48×72 model space

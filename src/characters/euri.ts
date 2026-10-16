@@ -1,10 +1,10 @@
-import { accessoryColor, faceAnchors, type Outfit } from "../engine/accessories";
-import { faceColor, standardFace } from "../engine/face";
-import { floor } from "../engine/ground";
-import { inkAt } from "../engine/pixelfont";
-import { LIGHT, hex, palette, tone, type Vec } from "../engine/pixels";
-import type { Pose } from "../engine/pose";
-import type { CharacterDef } from "./types";
+import { accessoryColor, faceAnchors, type Outfit } from "../engine/accessories.ts";
+import { faceColor, standardFace } from "../engine/face.ts";
+import { floor } from "../engine/ground.ts";
+import { inkAt } from "../engine/pixelfont.ts";
+import { LIGHT, hex, palette, tone, type Vec } from "../engine/pixels.ts";
+import type { Pose } from "../engine/pose.ts";
+import type { CharacterDef } from "./types.ts";
 
 // A big euro coin standing on its edge.
 const GOLD = palette("#5e4508", "#b8901e", "#e0b63a", "#f5d76e", "#fff5c4");

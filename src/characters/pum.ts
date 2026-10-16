@@ -1,8 +1,8 @@
-import { accessoryColor, faceAnchors, type Anchors } from "../engine/accessories";
-import { faceColor, standardFace } from "../engine/face";
-import { sheet } from "../engine/ground";
-import { ballShade, boxShade, hex, palette, sdRoundRect, tone, type Vec } from "../engine/pixels";
-import type { CharacterDef } from "./types";
+import { accessoryColor, faceAnchors, type Anchors } from "../engine/accessories.ts";
+import { faceColor, standardFace } from "../engine/face.ts";
+import { sheet } from "../engine/ground.ts";
+import { ballShade, boxShade, hex, palette, sdRoundRect, tone, type Vec } from "../engine/pixels.ts";
+import type { CharacterDef } from "./types.ts";
 
 // A glossy black plastic handle on a red, wide rectangular stamp.
 const PLASTIC = palette("#08080b", "#18181e", "#2b2b34", "#4f4f60", "#a6a6bd");

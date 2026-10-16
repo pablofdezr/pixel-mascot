@@ -1,5 +1,5 @@
-import { CANVAS_H, CANVAS_W, ORIGIN } from "./canvas";
-import { hex, type Vec } from "./pixels";
+import { CANVAS_H, CANVAS_W, ORIGIN } from "./canvas.ts";
+import { hex, type Vec } from "./pixels.ts";
 
 /**
  * What a character stands on. Rasterised once: it never moves. On a sheet the

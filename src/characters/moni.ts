@@ -1,9 +1,9 @@
-import { accessoryColor, faceAnchors, type Anchors, type Outfit } from "../engine/accessories";
-import { faceColor, standardFace } from "../engine/face";
-import { floor } from "../engine/ground";
-import { LIGHT, ballShade, boxShade, distanceToSegment, hex, palette, sdRoundRect, sdTriangle, tone, type Vec } from "../engine/pixels";
-import type { Pose } from "../engine/pose";
-import type { CharacterDef } from "./types";
+import { accessoryColor, faceAnchors, type Anchors, type Outfit } from "../engine/accessories.ts";
+import { faceColor, standardFace } from "../engine/face.ts";
+import { floor } from "../engine/ground.ts";
+import { LIGHT, ballShade, boxShade, distanceToSegment, hex, palette, sdRoundRect, sdTriangle, tone, type Vec } from "../engine/pixels.ts";
+import type { Pose } from "../engine/pose.ts";
+import type { CharacterDef } from "./types.ts";
 
 const PINK = palette("#6e2c43", "#d9779a", "#f4a3bf", "#fbc6d8", "#ffe6ef");
 const SNOUT = palette("#6e2c43", "#d2668c", "#e88aab", "#f4aec7", "#ffd6e4");

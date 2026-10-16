@@ -2,3 +2,4 @@ node_modules/
 dist-example/
 *-sheet.png
 .DS_Store
+dist/
