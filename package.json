@@ -1,0 +1,47 @@
+{
+  "name": "pixel-mascot",
+  "version": "0.1.0",
+  "description": "Procedural pixel-art mascots for the web: no sprites, every frame computed from signed distance functions. Eleven characters, 23 gestures, 28 accessories.",
+  "keywords": [
+    "pixel-art",
+    "mascot",
+    "canvas",
+    "animation",
+    "assistant",
+    "sdf",
+    "clippy"
+  ],
+  "license": "MIT",
+  "author": "Pablo Fernandez (https://www.pablofr.com)",
+  "homepage": "https://github.com/pablofdezr/pixel-mascot#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pablofdezr/pixel-mascot.git"
+  },
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./src/index.ts"
+    }
+  },
+  "files": [
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "scripts": {
+    "dev": "vite examples",
+    "build:example": "vite build examples --outDir ../dist-example --emptyOutDir",
+    "sheet": "tsx scripts/sheet.ts",
+    "typecheck": "tsc --noEmit",
+    "lineup": "tsx scripts/lineup.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.5",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.4"
+  }
+}

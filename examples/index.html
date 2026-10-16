@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>pixel-mascot</title>
+    <style>
+      :root { color-scheme: light dark; font: 14px/1.5 system-ui, sans-serif; }
+      body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #f4f4f4; color: #202020; }
+      @media (prefers-color-scheme: dark) { body { background: #111; color: #eee; } }
+      main { display: flex; flex-direction: column; align-items: center; gap: 16px; padding: 24px 16px; }
+      canvas { width: 288px; height: 268px; image-rendering: pixelated; cursor: pointer; }
+      .row { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; max-width: 560px; }
+      select, button { font: inherit; padding: 6px 12px; border-radius: 999px; border: 1px solid #0002; background: Canvas; color: CanvasText; cursor: pointer; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <canvas id="stage" aria-label="Mascot"></canvas>
+      <div class="row">
+        <select id="character" aria-label="Character"></select>
+        <select id="mood" aria-label="Mood"></select>
+      </div>
+      <div class="row" id="slots"></div>
+      <div class="row" id="gestures"></div>
+    </main>
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>
