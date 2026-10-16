@@ -1,6 +1,6 @@
 {
   "name": "pixel-mascot",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Procedural pixel-art mascots for the web: no sprites, every frame computed from signed distance functions. Eleven characters, 23 gestures, 28 accessories.",
   "keywords": [
     "pixel-art",
