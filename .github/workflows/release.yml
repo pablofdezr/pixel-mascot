@@ -1,0 +1,65 @@
+name: Release
+
+# Every push to main checks whether package.json's version is already on npm.
+# If it isn't, it typechecks, builds and publishes it, then tags vX.Y.Z and
+# creates a GitHub Release. Bump the version to release; any other push is a no-op.
+#
+# Publishing uses npm trusted publishing (OIDC): no token is stored here. The
+# trust is configured on npm for this repo and this file:
+#   npm trust github pixel-mascot --file release.yml --repo pablofdezr/pixel-mascot --allow-publish
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: write # tag and release
+  id-token: write # npm trusted publishing
+
+concurrency: release
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          registry-url: https://registry.npmjs.org
+
+      - name: Is this version on npm yet?
+        id: version
+        run: |
+          VERSION=$(node -p "require('./package.json').version")
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          if npm view "pixel-mascot@$VERSION" version > /dev/null 2>&1; then
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+            echo "pixel-mascot@$VERSION is already on npm: nothing to publish."
+          else
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+            echo "Publishing pixel-mascot@$VERSION."
+          fi
+
+      - name: Install
+        if: steps.version.outputs.publish == 'true'
+        run: npm ci
+
+      # prepublishOnly typechecks and builds dist/ first.
+      - name: Publish to npm
+        if: steps.version.outputs.publish == 'true'
+        run: npm publish --access public
+
+      - name: Tag and release on GitHub
+        if: steps.version.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          TAG: v${{ steps.version.outputs.version }}
+        run: |
+          if ! git ls-remote --exit-code --tags origin "refs/tags/$TAG" > /dev/null; then
+            git tag "$TAG"
+            git push origin "$TAG"
+          fi
+          gh release view "$TAG" > /dev/null 2>&1 || gh release create "$TAG" --title "$TAG" --generate-notes

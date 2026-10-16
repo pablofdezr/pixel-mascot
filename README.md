@@ -1,5 +1,7 @@
 # pixel-mascot
 
+[![npm](https://img.shields.io/npm/v/pixel-mascot)](https://www.npmjs.com/package/pixel-mascot) [![license](https://img.shields.io/npm/l/pixel-mascot)](LICENSE)
+
 Procedural pixel-art mascots for the web, in the style of the old Office assistants. There are no
 sprite images: every frame is computed from signed distance functions, fifteen times a second, so a
 character can hop, tilt, squash, blink and wear any hat without anyone drawing those frames.
