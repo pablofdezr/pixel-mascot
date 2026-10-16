@@ -430,10 +430,14 @@ function glasses(p: Vec, a: Anchors): number {
   const [l, r] = a.eyes;
   const rx = a.eyeRx + 1.8;
   const ry = a.eyeRy + 1.5;
-  for (const eye of a.eyes) {
-    const ring = Math.sqrt(((p.x - eye.x) / rx) ** 2 + ((p.y - eye.y) / ry) ** 2);
-    if (Math.abs(ring - 1) * Math.min(rx, ry) < 1) return C.frame;
-  }
+  const ring = (eye: Vec) => Math.sqrt(((p.x - eye.x) / rx) ** 2 + ((p.y - eye.y) / ry) ** 2);
+  const onRim = (d: number) => Math.abs(d - 1) * Math.min(rx, ry) < 1;
+  // The lenses are wider than the gap between the eyes, so the rims overlap. The right
+  // lens sits in front: inside it, the left rim and the bridge are hidden behind its glass.
+  const front = ring(r);
+  if (onRim(front)) return C.frame;
+  if (front < 1) return 0;
+  if (onRim(ring(l))) return C.frame;
   const bridge = distanceToSegment(p, { x: l.x + rx - 0.5, y: l.y - 1 }, { x: r.x - rx + 0.5, y: r.y - 1 });
   if (bridge < 0.9) return C.frame;
   return temples(p, a, rx - 0.3, l.y - 1.5, C.frame);
